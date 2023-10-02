@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divine Mercy Hostel</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="public/stylesheets/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7596021f26.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="menu-bar">
+        <div
+          class="navbar navbar-expand-lg navbar-light navbar-fixed-top"
+          id="nav"
+        >
+          <div class="navbar-brand-wrap">
+            <a class="navbar-brand" href="./index.html">
+              Divine Mercy Student Hall
+            </a>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars" id="hamburger"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item first-menu"">
+                <a class="nav-link href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">View Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./views/gallery.html">Gallery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end of navbar div -->
+      </div>
+      <!-- end of menu-bar div -->
+    </header>
+    <!-- end of header element -->
+
+    <div
+      id="img-carousel-wrap"
+      class="carousel slide carousel-fade"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#img-carousel-wrap"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#img-carousel-wrap" data-slide-to="1"></li>
+        <li data-target="#img-carousel-wrap" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-img active">
+          <img
+            src="./public/images/test1.png"
+            class="d-block w-100"
+            alt="front-view-image"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <p>Front View</p>
+          </div>
+        </div>
+        <div class="carousel-item carousel-img">
+          <img
+            src="./public/images/test2.png"
+            class="d-block w-100"
+            alt="front-view-image (night time)"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <p>Front View (Night time)</p>
+          </div>
+        </div>
+        <div class="carousel-item carousel-img">
+          <img
+            src="./public/images/test1.png"
+            class="d-block w-100"
+            alt="compound"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <p>Compound</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-target="#img-carousel-wrap"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-target="#carouselExampleCaptions"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+    <!-- end of carousel div -->
+
+    <div class="aboutUs-wrap container">
+      <div class="aboutUs-img">
+        <img src="./public/images/test1.png" alt="" />
+      </div>
+
+      <div class="aboutUs-text-wrap">
+        <div class="centered-text">
+          <h3 class="aboutUs-header">About Us</h3>
+
+          <p class="aboutUs-text">
+            Welcome to Divine Mercy Student's Hall! We are a vibrant and
+            inclusive community of students, located in Owerri. Our hall
+            provides affordable and comfortable accommodation for students who
+            are studying at local universities and colleges. <br /><br /><br />
+            Our hall is equipped with modern facilities, including steady power
+            supply, constant water supply, comfortable spaces for learning, . We
+            also have a dedicated team of staff who are available staff to
+            provide support and assistance to our residents.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end of aboutUs div -->
+
+    <div class="amenities-wrap">
+      <h3>Featured amenities</h3>
+
+      <div class="amenities-list">
+        <div class="amenity">
+          <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <div class="amenity-name"><p>Steady Power Supply</p></div>
+        </div>
+
+        <div class="amenity">
+          <div class="icon"><i class="fa-solid fa-shield"></i></div>
+          <div class="amenity-name"><p>Standby Security</p></div>
+        </div>
+
+        <div class="amenity">
+          <div class="icon"><i class="fa-solid fa-bath"></i></div>
+          <div class="amenity-name"><p>Constant Water Supply</p></div>
+        </div>
+
+        <div class="amenity">
+          <div class="icon"><i class="fa-solid fa-solar-panel"></i></div>
+          <div class="amenity-name"><p>Solar Powered Borehole</p></div>
+        </div>
+      </div>
+    </div>
+    <!-- end of amenities-wrap div -->
+
+    <div class="contactUs-wrap container">
+      <h3>Contact Us</h3>
+
+      <div class="contactUs-flex">
+        <div class="contactUs-item" id="address">
+          <h4>Address</h4>
+
+          <p>
+            Umuezeala Eziobodo, <br />
+            Owerri West, Imo state.
+          </p>
+        </div>
+
+        <div class="contactUs-item" id="contact">
+          <h4>Contact</h4>
+
+          <p>
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            09049636564
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end of contactUs-wrap div -->
+
+    <section class="mapbox map-location-one" data-mapbox>
+      <figure>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.2901173494906!2d6.997852474618783!3d5.372654235466903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10425dfcba99647b%3A0x6eabcddcaf8389a3!2sDivine%20Mercy%20Lodge!5e0!3m2!1sen!2sng!4v1692732988915!5m2!1sen!2sng"
+          width="600"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </figure>
+    </section>
+
+    <section class="mapbox map-location-two" data-mapbox>
+      <figure>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.2901173494906!2d6.997852474618786!3d5.3726542354669045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10425dfcba99647b%3A0x6eabcddcaf8389a3!2sDivine%20Mercy%20Lodge!5e0!3m2!1sen!2sng!4v1692752682471!5m2!1sen!2sng"
+          width="300"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </figure>
+    </section>
+
+    <footer>
+      <ul>
+        <li>Divine Mercy Student's Hall</li>
+        <li>Umuezeala Eziobodo, Owerri West, Imo State.</li>
+        <li>©2023 Divine Mercy Students Hall | All Rights Reserved</li>
+      </ul>
+    </footer>
+    <!-- end of footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
