@@ -9,304 +9,350 @@ $font-poppins: "Poppins", sans-serif;
 
 //////////mixins
 @mixin font-block($font-size, $font-weight, $line-height) {
-  font-size: $font-size;
-  font-style: normal;
-  line-height: $line-height;
-  font-family: $font-poppins;
-  font-weight: $font-weight;
+    font-size: $font-size;
+    font-style: normal;
+    line-height: $line-height;
+    font-family: $font-poppins;
+    font-weight: $font-weight;
 }
 
 /************************************************* base styles ***************************************/
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 //////////////////////////////////////////navbar styling
 #nav {
-  background-color: $primaryColor !important;
-  padding: 2rem 1rem;
+    background-color: $primaryColor !important;
+    padding: 2rem 1rem;
 
-  > button {
-    > .fa-bars {
-      color: $white;
+    >button {
+        >.fa-bars {
+            color: $white;
+        }
     }
-  }
 }
 
 .navbar-brand {
-  color: $white !important;
-  @include font-block(25px, 700, 27px);
+    color: $white !important;
+    @include font-block(25px, 700, 27px);
+
+    @media screen and (max-width: 576px) {
+        @include font-block(14px, 700, 20px);
+    }
 }
 
 .nav-item {
-  margin: 0.5rem 1.5rem;
+    margin: 0.5rem 1.5rem;
 
-  //   @media only screen and (max-width: 998px) {
-  //     .first-menu {
-  //       margin-top: 2rem;
-  //     }
-  //   }
+    //   @media only screen and (max-width: 998px) {
+    //     .first-menu {
+    //       margin-top: 2rem;
+    //     }
+    //   }
 
-  .nav-link {
-    color: $white !important;
-    @include font-block(15px, 700, 18px);
+    .nav-link {
+        color: $white !important;
+        @include font-block(15px, 700, 18px);
 
-    &:hover {
-      background: $white;
-      color: $primaryColor !important;
+        &:hover {
+            background: $white;
+            color: $primaryColor !important;
 
-      @media only screen and (max-width: 998px) {
-        width: max-content;
-      }
+            @media only screen and (max-width: 998px) {
+                width: max-content;
+            }
+        }
     }
-  }
 }
+
 //////////////////////////////////////////end of navbar styling
 ///
 ///
 //////////////////////////////////////////img-carousel-wrap styling
 #img-carousel-wrap {
-  width: 100%;
+    max-width: 100%;
+    height: 70vh;
+
+
+    .carousel-inner {
+        height: 100%;
+
+        .carousel-img {
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center;
+    }
 }
 
-.carousel-inner {
-  width: 100%;
-
-  .carousel-img {
-    max-height: 50vh;
-    width: 100%;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-  }
-}
 //////////////////////////////////////////end of img-carousel-wrap styling
 ///
 ///
 /// //////////////////////////////////////////aboutUs-wrap styling
 .aboutUs-wrap {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: space-between;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
 
-  @media only screen and (max-width: 1200px) {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  > * {
-    flex-shrink: 1;
-    flex-grow: 1;
-  }
-
-  .aboutUs-img {
-    width: 100%;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .aboutUs-text-wrap {
-    width: 100%;
-    background: $primaryColor;
-    padding: 1rem 2rem 0;
-
-    .centered-text {
-      margin: 3rem auto;
-    }
-    .aboutUs-header {
-      color: $white;
-      @include font-block(23px, 700, 25px);
-      text-align: center;
-      text-transform: uppercase;
+    @media only screen and (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .aboutUs-text {
-      color: $white;
-      @include font-block(18px, 400, 20px);
-      text-align: center;
-      padding: 1rem;
+    >* {
+        flex-shrink: 1;
+        flex-grow: 1;
     }
-  }
+
+    .aboutUs-img {
+        width: 100%;
+
+        img {
+            width: 400px;
+            vertical-align: middle;
+            height: 400px;
+        }
+    }
+
+    .aboutUs-text-wrap {
+        width: 100%;
+        background: $primaryColor;
+        padding: 1rem 2rem 0;
+
+        .centered-text {
+            margin: 3rem auto;
+        }
+
+        .aboutUs-header {
+            color: $white;
+            @include font-block(23px, 700, 25px);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .aboutUs-text {
+            color: $white;
+            @include font-block(18px, 400, 20px);
+            text-align: center;
+            padding: 1rem;
+        }
+    }
 }
+
 //////////////////////////////////////////end of aboutUs-wrap styling
 ///
 ///
 /// //////////////////////////////////////////amenities styling
 .amenities-wrap {
-  margin-top: 2rem;
-  background: $secondaryColor;
-  width: 100%;
-  padding: 2rem;
+    margin-top: 2rem;
+    background: $secondaryColor;
+    width: 100%;
+    padding: 2rem;
 
-  > h3 {
-    color: $black;
-    text-align: center;
-    @include font-block(23px, 700, 25px);
-    padding-top: 2rem;
-  }
-
-  > .amenities-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem 2.5rem;
-
-    > * {
-      flex-grow: 1;
-      flex-shrink: 1;
-    }
-
-    .amenity {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      ////////local variable
-      $textColor: #2e3333;
-
-      .icon {
-        color: $textColor;
-        font-size: 25px;
-      }
-
-      .amenity-name {
-        color: $textColor;
-        @include font-block(23px, 400, 25px);
+    >h3 {
+        color: $black;
         text-align: center;
-      }
+        @include font-block(23px, 700, 25px);
+        padding-top: 2rem;
     }
-  }
+
+    >.amenities-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem 2.5rem;
+
+        >* {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        .amenity {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            ////////local variable
+            $textColor: #2e3333;
+
+            .icon {
+                color: $textColor;
+                font-size: 25px;
+            }
+
+            .amenity-name {
+                color: $textColor;
+                @include font-block(23px, 400, 25px);
+                text-align: center;
+            }
+        }
+    }
 }
+
 //////////////////////////////////////////end of amenities styling
 ///
 ///
 /// //////////////////////////////////////////contactUs styling
 .contactUs-wrap {
-  margin-top: 3rem;
-
-  @media only screen and (max-width: 520px) {
-    margin-top: 1.5rem;
-  }
-
-  > h3 {
-    color: $black;
-    text-align: center;
-    @include font-block(23px, 700, 25px);
-    margin: 2rem 0 1rem;
-    color: $black;
-  }
-
-  .contactUs-flex {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: space-between;
-    padding: 2rem;
+    margin-top: 3rem;
 
     @media only screen and (max-width: 520px) {
-      flex-direction: column;
-      align-items: center;
+        margin-top: 1.5rem;
     }
 
-    .contactUs-item {
-      > h4 {
-        @include font-block(20px, 500, 22px);
+    >h3 {
         color: $black;
-        padding: 0.5rem 0 0.5rem;
-
-        @media only screen and (max-width: 520px) {
-          text-align: center;
-        }
-      }
-
-      #contact {
-        text-align: right;
-
-        @media only screen and (max-width: 520px) {
-          text-align: center;
-        }
-      }
-
-      #address {
-        text-align: left;
-
-        @media only screen and (max-width: 520px) {
-          text-align: center;
-        }
-      }
-
-      > p {
-        @include font-block(18px, 400, 20px);
-        color: #494a4a;
-
-        @media only screen and (max-width: 520px) {
-          text-align: center;
-        }
-      }
+        text-align: center;
+        @include font-block(23px, 700, 25px);
+        margin: 2rem 0 1rem;
+        color: $black;
     }
-  }
+
+    .contactUs-flex {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-between;
+        padding: 2rem;
+
+        @media only screen and (max-width: 520px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contactUs-item {
+            >h4 {
+                @include font-block(20px, 500, 22px);
+                color: $black;
+                padding: 0.5rem 0 0.5rem;
+
+                @media only screen and (max-width: 520px) {
+                    text-align: center;
+                }
+            }
+
+            #contact {
+                text-align: right;
+
+                @media only screen and (max-width: 520px) {
+                    text-align: center;
+                }
+            }
+
+            #address {
+                text-align: left;
+
+                @media only screen and (max-width: 520px) {
+                    text-align: center;
+                }
+            }
+
+            >p {
+                @include font-block(18px, 400, 20px);
+                color: #494a4a;
+
+                @media only screen and (max-width: 520px) {
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
+
 //////////////////////////////////////////end of contactUs styling
 ///
 ///
 /// //////////////////////////////////////////map styling
 .map-location-one,
 .map-location-two {
-  margin: 2rem;
+    margin: 2rem;
 
-  figure {
-    text-align: center;
-  }
+    figure {
+        text-align: center;
+    }
 }
 
 .map-location-one {
-  @media only screen and (max-width: 620px) {
-    display: none;
-  }
+    @media only screen and (max-width: 620px) {
+        display: none;
+    }
 }
 
 .map-location-two {
-  @media only screen and (max-width: 2560px) and (min-width: 621px) {
-    display: none;
-  }
+    @media only screen and (max-width: 2560px) and (min-width: 621px) {
+        display: none;
+    }
 }
+
 //////////////////////////////////////////end of map styling
 ///
-///
+/// ///////////////////////////////////// Gallery styling
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    /* Automatically adjust row height based on content */
+
+
+    .gallery-item {
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+
 /// //////////////////////////////////////////footer styling
 footer {
-  background: $primaryColor;
-  padding: 2rem;
+    background: $primaryColor;
+    padding: 2rem;
 
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
 
-    > li {
-      color: $white;
-      text-align: center;
+        >li {
+            color: $white;
+            text-align: center;
+        }
+
+        >li:nth-child(1) {
+            @include font-block(21px, 700, 23px);
+
+            @media screen and (max-width: 576px) {
+                @include font-block(18px, 700, 20px);
+            }
+        }
+
+        >li:nth-child(2),
+        li:nth-child(3) {
+            @include font-block(21px, 400, 23px);
+
+            @media screen and (max-width: 576px) {
+                @include font-block(16px, 700, 20px);
+            }
+        }
     }
-
-    > li:nth-child(1) {
-      @include font-block(21px, 700, 23px);
-    }
-
-    > li:nth-child(2),
-    li:nth-child(3) {
-      @include font-block(21px, 400, 23px);
-    }
-  }
 }
